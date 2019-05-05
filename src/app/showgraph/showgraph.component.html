@@ -1,0 +1,48 @@
+<div class="row chartDiv">
+	<div class="displayChart col-sm-8">
+		<div id="chartContainer" >
+
+		</div>
+		<div class="dots">
+			<p class="bluedot dotinfo"><span class="dot"></span> 0,1,2,3,4,5,6,8,9</p>
+			<p class="reddot dotinfo"><span class="dot red"></span> 7</p>
+		</div>
+	</div>
+	
+	<div class="col-sm-4 currNumDiv">
+		<div class="stopSess">
+			<button type="button" class="btn btn-default stop" (click)="stopSession()">Stop Session</button>
+		</div>
+		<div class="currentNumPar">
+			<div class="currentNum">
+				<p>{{ currentNumber }}</p>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row" *ngIf="sessStopped">
+	<hr>
+	<div class="tableDiv" *ngIf="!isSeven">
+		<h3>Sorry. No data to be displayed.</h3>
+	</div>
+	<div class="tableDiv" *ngIf="isSeven">
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Number</th>
+					<th scope="col">Time</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor="let time of sevenDB">
+					<td data-label="Number">7</td>
+					<td data-label="Time">{{ time }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div id="topButton">
+		<button (click)="goTop($event)">&#x2B99;</button>
+	</div>
+	<hr>
+</div>

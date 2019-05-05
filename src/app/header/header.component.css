@@ -1,0 +1,18 @@
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus{
+  border-color:transparent;
+  background-color:rgb(184,241,251);
+}
+
+#navb {
+	padding-left: 1em;
+	padding-right: 1em;
+	margin-bottom: 0px;
+}
+
+.navbar-link {
+	color: #ffffff;
+}
+
+.nav li a {
+	color: #ffffff;
+}
