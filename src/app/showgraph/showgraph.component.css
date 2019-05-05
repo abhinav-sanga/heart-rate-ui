@@ -21,6 +21,13 @@
 	margin-top: 2em;
 }
 
+.errors {
+  padding-left: 1.5em;
+  float: left;
+  display: inline-block;
+  color: red;
+}
+
 .currentNum {
 	border: 1px solid #000000;
 	text-align: center;
@@ -35,7 +42,7 @@
   .currNumDiv {
     text-align: center;
     width: 100%;
-    padding: 1.5em 0;
+    padding: 2.5em 0 1.5em 0;
   }
 
   .currentNumPar, .stopSess {
@@ -71,6 +78,7 @@
 
 .dotinfo {
 	display: inline-block;
+  float: right;
 }
 
 .dots {

@@ -4,14 +4,15 @@
 
 		</div>
 		<div class="dots">
-			<p class="bluedot dotinfo"><span class="dot"></span> 0,1,2,3,4,5,6,8,9</p>
 			<p class="reddot dotinfo"><span class="dot red"></span> 7</p>
+			<p class="bluedot dotinfo"><span class="dot"></span> 0,1,2,3,4,5,6,8,9</p>
+			<div class="errors" *ngIf = "sessStopped">Server side socket not connected!</div>
 		</div>
 	</div>
 	
 	<div class="col-sm-4 currNumDiv">
 		<div class="stopSess">
-			<button type="button" class="btn btn-default stop" (click)="stopSession()">Stop Session</button>
+			<button type="button" class="btn btn-danger stop" (click)="stopSession()">Stop Session</button>
 		</div>
 		<div class="currentNumPar">
 			<div class="currentNum">

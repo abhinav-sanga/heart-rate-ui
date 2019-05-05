@@ -16,7 +16,7 @@ export class ShowgraphComponent implements OnInit {
 	dataPoints = [];
 	sevenDB = [];
 	chart;
-	sessStopped = false;
+	sessStopped = true;
 	isSeven = false;
 	xval = 0;
 	yval = 0;
@@ -51,6 +51,7 @@ export class ShowgraphComponent implements OnInit {
 	fetchDataPoints(){
 		this.fetchDataService.getDataPoints().subscribe((data) => {
 			if(data >=0 ){
+				this.sessStopped = false;
 				this.currentNumber = data;
 				if(data == 7){
 					this.isSeven = true;
